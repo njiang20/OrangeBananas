@@ -28,7 +28,7 @@ public class Card {
   }
 
   public String printCard() {
-    return value[value] + " of " + suit[suit];
+    return value + " of " + suit;
   }
 
 }
