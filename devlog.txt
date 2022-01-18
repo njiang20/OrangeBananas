@@ -2,3 +2,12 @@
 * Nina: Made repo and added files
 * Nina, Russel, Eric: Came up with a plan on KTS
 * Russell: Made propro.pdf and flag.jpg
+
+01/15
+* Nina: created v0 files, updated Card.java and Deck.java
+
+01/16
+* Nina: updated propro.pdf
+
+01/18
+* Nina: updated v0 -+Woo.java
