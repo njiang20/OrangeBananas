@@ -10,4 +10,4 @@
 * Nina: updated propro.pdf
 
 01/18
-* Nina: updated v0 -+Woo.java
+* Nina: updated functionality of v0 Woo.java, Player.java, Game.java, Deck.java, Card.java

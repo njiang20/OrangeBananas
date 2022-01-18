@@ -3,7 +3,9 @@ import java.io.*;
 
 public class Woo {
   public final static int totRounds = 3;
+
   private int funds;
+  private int bet;
   private boolean burn;
   private String choice;
 
@@ -20,15 +22,13 @@ public class Woo {
 
   public void newGame() {
     String s;
-    s = "--- Welcome to Texas Hold'em! ---"
+    s = "--- Welcome to Texas Hold'em! ---";
     System.out.println(s);
   } //end newGame
 
   public boolean playRound() {
-    i = 0
     //starts rounds > deal one faceup card + one card in center
-    System.out.println("Hole cards: " + holeCards[i] + holeCards[i + 1]
-      + "\nCenter cards: " + centerCards[i]);
+    System.out.println("Hole cards: " + hole1 + hole2 + "\nCenter cards: " + centerCards[0]);
 
     System.out.println("Would you like to place a bet now? (Y/N)");
     try {
@@ -38,10 +38,18 @@ public class Woo {
 
     if(choice.equals("Y")) {
       System.out.println("How much would you like to bet? Current funds: " + funds);
+      try {
+        bet = in.readLine();
+      }
+      catch(IOException e) {}
+
+      funds -= bet;
     }
-    //print funds + option to input bet <= funds
-    //option to burn (boolean)
-    //stops when i = totRounds
+
+    addCenterCard();
+    addFaceUp();
+
+    //add new cards
 
   } //end playRound
 
