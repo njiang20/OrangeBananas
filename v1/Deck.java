@@ -49,15 +49,5 @@ public class Deck {
   }
 */
 
-  public Card getRandCard() {
-    Random a = new Random();
-    String randVal = getRandVal();
-    String randSuit = getRandSuit();
-  }
-
-  public String getRandVal() {
-    int i = 1 + a.nextInt(13);
-    return cards.toChar(i);
-  }
 
 } //end Deck

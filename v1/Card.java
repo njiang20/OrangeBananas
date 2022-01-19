@@ -32,6 +32,11 @@ public class Card {
     return value + " of " + suit;
   }
 
+  public String getRandVal() {
+    int a = (int)(Math.random() * (values.length + 1)); //random index
+    return values[toChar(1)];
+  }
+
   public String toChar(short value) {
     switch(value) {
       case 1:
@@ -46,6 +51,21 @@ public class Card {
         return String.valueOf(value);
     }
   } //end toChar
+
+  public short toShort(String value) {
+    switch(value) {
+      case "A":
+        return 1;
+      case "J":
+        return 11;
+      case "Q":
+        return 12;
+      case "K":
+        return 13;
+      default:
+        return Short.parseShort(value);
+    }
+  } //end toShort
 
   public String valOfSuit(short suit) {
     switch(suit) {

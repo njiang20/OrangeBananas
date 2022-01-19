@@ -7,11 +7,11 @@ public class Game {
   private int index = 0;
 
   public void addCenterCard() {
-    center[index++] = cards.getRandCard(); //method in Deck.java to get a random card
+    center[index++] = new Card(a, b); //method in Deck.java to get a random card
   }
 
   public void addFaceUp() {
-    visCards[index++] = cards.getRandCard();
+    visCards[index++] = new Card(a, b);
   }
 
   public void printGame() {
