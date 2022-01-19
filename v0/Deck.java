@@ -9,25 +9,14 @@ public class Deck {
   public static void sortDeck() {
     for(int i = 0; i < cards.length; i++) {
       for(int j = cards.length; j > i; j--) {
-        if(Card.getVal(j) < Card.getVal(j - 1)) {
-
+        if(cards.getVal(j) < cards.getVal(j - 1)) {
+          int temp = (int)data.getVal(j);
+          cards.set(j, cards.get(j - 1));
+          cards.set(j - 1, temp);
         }
       }
     }
+  } //end sortDeck
 
-  }
 
-  public static void bubbleSortV( ArrayList<Comparable> data )
-  {
-    for(int i = 0; i < data.size()-1; i++) {
-      for(int j = data.size() - 1; j > i; j--){
-        if((int)data.get(j) < (int)data.get(j - 1)) {
-          int temp = (int)data.get(j);
-          data.set(j, data.get(j - 1));
-          data.set(j-1, temp);
-        }
-      }
-    }
-  }
-
-  }
+} //end Deck
