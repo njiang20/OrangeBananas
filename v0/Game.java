@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Game {
   private Card[] center = new Card[3];
   private Card[] visCards = new Card[3];
@@ -5,11 +7,11 @@ public class Game {
   private int index = 0;
 
   public void addCenterCard(Card card) {
-    this.center[index++] = card;
+    center[index++] = cards[(Math.random() * (52 - 1) + 1)];
   }
 
   public void addFaceUp(Card card) {
-    this.visCards[index++] = card;
+    visCards[index++] = cards[];
   }
 
   public void printGame() {
