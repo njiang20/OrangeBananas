@@ -2,14 +2,14 @@ import java.util.*;
 
 public class Card {
   private static String[] values = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
-  private String[] suits = {"Diamonds", "Clubs", "Hearts", "Spades"};
+  private static String[] suits = {"Diamonds", "Clubs", "Hearts", "Spades"};
 
   private short value, suit;
 
   //Constructor
   public Card(short value, short suit) {
-    this.value = value;
-    this.suit = suit;
+    this.value = toShort(getRandVal());
+    this.suit = shortSuit(getRandSuit());
   }
 
   public void setVal(short value) {
@@ -32,9 +32,14 @@ public class Card {
     return value + " of " + suit;
   }
 
-  public String getRandVal() {
-    int a = (int)(Math.random() * (values.length + 1)); //random index
-    return values[toChar(1)];
+  public static String getRandVal() {
+    short a = (short)(Math.random() * (values.length + 1)); //random index
+    return values[a];
+  }
+
+  public static String getRandSuit() {
+    short b = (short)(Math.random() * (suits.length + 1)); //random index
+    return suits[b];
   }
 
   public String toChar(short value) {
@@ -67,22 +72,26 @@ public class Card {
     }
   } //end toShort
 
-  public String valOfSuit(short suit) {
+  public short shortSuit(String suit) {
     switch(suit) {
-      case 1:
-        return "Diamonds";
-      case 2:
-        return "Clubs";
-      case 3:
-        return "Hearts";
-      case 4:
-        return "Spades";
+      case "Diamonds":
+        return 1;
+      case "Clubs":
+        return 2;
+      case "Hearts":
+        return 3;
+      case "Spades":
+        return 4;
       default:
-        return "";
+        return -1;
     }
   } //end charaOfSuit
 
   //compare rank + numbers
+  public static void main(String[] args) {
+    System.out.println(getRandVal());
+    System.out.println(getRandSuit());
+  }
 
 
 } //end Card
