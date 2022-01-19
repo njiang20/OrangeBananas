@@ -42,7 +42,7 @@ public class Card {
     return suits[b];
   }
 
-  public String toChar(short value) {
+  public String toRank(short value) {
     switch(value) {
       case 1:
         return "A";
@@ -55,9 +55,10 @@ public class Card {
       default:
         return String.valueOf(value);
     }
-  } //end toChar
+  } //end toRank
 
   public short toShort(String value) {
+    //converts values to numerical value (in short)
     switch(value) {
       case "A":
         return 1;
@@ -73,6 +74,7 @@ public class Card {
   } //end toShort
 
   public short shortSuit(String suit) {
+    //converts suits to a numerical equivalent (in short)
     switch(suit) {
       case "Diamonds":
         return 1;
