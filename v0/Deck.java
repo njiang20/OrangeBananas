@@ -1,8 +1,12 @@
 public class Deck {
-  private Card[] cards = new Card[52];
+  public static final int totCards = 52;
+  private Card[] cards;
 
   //Constructor
   public Deck() {
+    cards = new Card[totCards];
+    int i = 0;
+    for(int suit = )
 
   }
 

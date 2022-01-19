@@ -1,38 +1,38 @@
 import java.util.*;
 
 public class Card {
-  //private static String[] value = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
-  //private String[] suit = {"Diamonds", "Clubs", "Hearts", "Spades"};
-  private String value;
-  private String suit;
+  private static String[] values = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+  private String[] suits = {"Diamonds", "Clubs", "Hearts", "Spades"};
+
+  private short value, suit;
 
   //Constructor
-  public Card(String value, String suit) {
+  public Card(short value, short suit) {
     this.value = value;
     this.suit = suit;
   }
 
-  public String setVal(int value) {
-    this.value = this.toChar(value);
+  public void setVal(short value) {
+    this.value = value;
   }
 
-  public String getVal() {
-    return value;
-  }
-
-  public String setSuit(int suit) {
+  public void setSuit(short suit) {
     this.suit = suit;
   }
 
-  public String getSuit() {
+  public short getVal() {
+    return value;
+  }
+
+  public short getSuit() {
     return suit;
   }
 
   public String toString() {
-    return rank + " of " + suit;
+    return value + " of " + suit;
   }
 
-  public String toChar(int value) {
+  public String toChar(short value) {
     switch(value) {
       case 1:
         return "A";
@@ -43,23 +43,26 @@ public class Card {
       case 13:
         return "K";
       default:
-        return value.toString();
+        return String.valueOf(value);
     }
   } //end toChar
 
-  public int toNum() {
-    switch(value) {
-      case "A":
-        return 1;
-      case "J":
-        return 11;
-      case "Q":
-        return 12;
-      case "K":
-        return 13;
+  public String charaOfSuit(short suit) {
+    switch(suit) {
+      case 14:
+        return "Diamonds";
+      case 15:
+        return "Clubs";
+      case 16:
+        return "Hearts";
+      case 17:
+        return "Spades";
       default:
-        return Integer.parseInt(value);
+        return "";
     }
-  }
+  } //end charaOfSuit
 
-}
+  //compare rank + numbers
+
+
+} //end Card
