@@ -47,20 +47,24 @@ public class Card {
     }
   } //end toChar
 
-  public String charaOfSuit(short suit) {
+  public String valOfSuit(short suit) {
     switch(suit) {
-      case 14:
+      case 1:
         return "Diamonds";
-      case 15:
+      case 2:
         return "Clubs";
-      case 16:
+      case 3:
         return "Hearts";
-      case 17:
+      case 4:
         return "Spades";
       default:
         return "";
     }
   } //end charaOfSuit
+
+  public static boolean sameCard() {
+
+  }
 
   //compare rank + numbers
 
