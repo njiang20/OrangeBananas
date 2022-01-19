@@ -1,13 +1,79 @@
-01/13
-* Nina: Made repo and added files
-* Nina, Russel, Eric: Came up with a plan on KTS
-* Russell: Made propro.pdf and flag.jpg
+Orange Bananas
+Nina Jiang
+Russel Goychayev
+Eric He
+pd08
 
-01/15
-* Nina: created v0 files, updated Card.java and Deck.java
+Texas Hold'em in Java
 
-01/16
-* Nina: updated propro.pdf
+/////////// Zone of Reflection \\\\\\\\\\\
+------------------------------------------
+OBSTACLES OVERCOME
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wow we so BOSS bc...
 
-01/18
-* Nina: updated functionality of v0 Woo.java, Player.java, Game.java, Deck.java, Card.java
+UNRESOLVED ISSUES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+blah blah pesky bug...
+maybe some of these will move into the Obs.Ovrcm section...
+
+COOL STUFF LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+wow! oo!...
+
+MID-DEVELOPMENT DESIGN CHANGES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+we changed ___ to ___ bc...
+
+LESSONS LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tales of wisdom gained...
+||||||||||||||||||||||||||||||||||||||||||
+
+
+
+ ______   ______   __   __   __       ______   _______
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
+==============================================================
+
+
+yyyy-mm-dd
+--------------------------------------------------------------
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+<Member> :: <Thing member did.>
+==============================================================
+
+2022-01-13
+--------------------------------------------------------------
+Nina :: Made repo and added files
+Nina, Russel, Eric :: Came up with a plan on KTS
+Russell :: Made propro.pdf and flag.jpg
+==============================================================
+
+2022-01-15
+--------------------------------------------------------------
+Nina :: created v0 files, updated Card.java and Deck.java
+==============================================================
+
+2022-01-16
+--------------------------------------------------------------
+Nina :: updated propro.pdf
+==============================================================
+
+2022-01-17
+--------------------------------------------------------------
+Nina :: updated functionality of v0 files
+==============================================================
+
+2022-01-18
+--------------------------------------------------------------
+Nina :: updated v0 files
+
+2022-01-19
+--------------------------------------------------------------
