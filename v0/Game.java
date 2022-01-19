@@ -7,11 +7,11 @@ public class Game {
   private int index = 0;
 
   public void addCenterCard(Card card) {
-    center[index++] = cards[(Math.random() * (52 - 1) + 1)];
+    center[index++] = cards[getRandCard(1)]; //method in Deck.java to get a random card
   }
 
   public void addFaceUp(Card card) {
-    visCards[index++] = cards[];
+    visCards[index++] = cards[getRandCard(1)];
   }
 
   public void printGame() {
