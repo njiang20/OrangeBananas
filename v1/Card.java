@@ -1,8 +1,10 @@
 import java.util.*;
 
 public class Card {
-  private static String[] values = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
-  private static String[] suits = {"Diamonds", "Clubs", "Hearts", "Spades"};
+  private static ArrayList<String> values = new ArrayList<>(Arrays.asList("Ace",
+    "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"));
+  private static ArrayList<String> suits = new ArrayList<>(Arrays.asList("Diamonds",
+    "Clubs", "Hearts", "Spades"));
 
   private static short value, suit;
 
@@ -31,13 +33,13 @@ public class Card {
   }
 
   public static String getRandVal() {
-    short a = (short)(Math.random() * (values.length - 1)); //random index
-    return values[a];
+    short a = (short)(Math.random() * (values.size() - 1)); //random index
+    return values.get(a);
   }
 
   public static String getRandSuit() {
-    short b = (short)(Math.random() * (suits.length - 1)); //random index
-    return suits[b];
+    short b = (short)(Math.random() * (suits.size() - 1)); //random index
+    return suits.get(b);
   }
 
   public static String toRank(short value) {
@@ -92,15 +94,15 @@ public class Card {
   }
 
   public static String printCard() {
-    return values[toShort(getRandVal())] + " of " + suits[shortSuit(getRandSuit())];
+    return getRandVal() + " of " + getRandSuit();
   }
 
-/*
+
   public static void main(String[] args) {
     System.out.println(getRandVal());
     System.out.println(getRandSuit());
     System.out.println(printCard());
   }
-*/
+
 
 } //end Card
