@@ -6,12 +6,12 @@ public class Card {
   private static ArrayList<String> suits = new ArrayList<>(Arrays.asList("Diamonds",
     "Clubs", "Hearts", "Spades"));
 
-  private static short value, suit;
+  private static String value, suit;
 
   //Constructor
   public Card() {
-    value = toShort(getRandVal());
-    suit = shortSuit(getRandSuit());
+    value = getRandVal();
+    suit = getRandSuit();
   }
 
 /*
@@ -24,11 +24,11 @@ public class Card {
   }
 */
 
-  public static short getVal() {
+  public static String getVal() {
     return value;
   }
 
-  public static short getSuit() {
+  public static String getSuit() {
     return suit;
   }
 
@@ -41,8 +41,7 @@ public class Card {
     short b = (short)(Math.random() * (suits.size() - 1)); //random index
     return suits.get(b);
   }
-  
-/*
+
   public static String toRank(short value) {
     switch(value) {
       case 1:
@@ -89,7 +88,6 @@ public class Card {
         return -1;
     }
   } //end charaOfSuit
-*/
 
   public String toString() {
     return value + " of " + suit;
@@ -99,10 +97,10 @@ public class Card {
     return getRandVal() + " of " + getRandSuit();
   }
 
-
+/*
   public static void main(String[] args) {
     System.out.println(printCard());
   }
-
+*/
 
 } //end Card

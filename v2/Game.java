@@ -6,19 +6,19 @@ public class Game {
 
   public static void addCenterCard() {
     int index = 0;
-    if(center.size() >= 3) {
+    if(center.size() <= 3) {
       //center = Arrays.copyOf(center, center.size() + 1);
       //center(index++) = new Card();
-      center.set(index++, new Card());
+      center.add(new Card());
     }
   }
 
   public static void addFaceUp() {
     int index = 0;
-    if(visCards.size() >= 3) {
+    if(visCards.size() <= 3) {
       //visCards = Arrays.copyOf(visCards, visCards.size() + 1);
       //visCards(index++) = new Card();
-      visCards.set(index++, new Card());
+      visCards.add(new Card());
     }
   }
 
@@ -30,25 +30,29 @@ public class Game {
     return visCards.get(x);
   }
 
-  public static void printCenter() {
+  public static String printCenter() {
     System.out.println("The game contains the following center cards: ");
+    String plCenter = "";
     for(int i = 0; i < center.size(); i++) {
-      System.out.println(getCenterCard(i).printCard() + "\t");
+      plCenter += getCenterCard(i).toString();
     }
+    return plCenter;
   } //end printCenter
 
-  public static void printFaceUp() {
+  public static String printFaceUp() {
     System.out.println("Your hand contains the following face-up cards: ");
+    String plFaceUp = "";
     for(int i = 0; i < center.size(); i++) {
-      System.out.println(getFaceUp(i).printCard() + "\t");
+      plFaceUp += getFaceUp(i).toString();
     }
+    return plFaceUp;
   } //end printFaceUp
 
   public static void main(String[] args) {
     addCenterCard();
     addFaceUp();
-    printFaceUp();
-    printCenter();
+    System.out.println(printCenter());
+    System.out.println(printFaceUp());
   }
 
 } //end Game
