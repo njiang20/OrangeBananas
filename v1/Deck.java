@@ -1,7 +1,8 @@
 import java.util.*;
 
 public class Deck {
-  public Card[] cards = new Card[52];
+  //public Card[] cards = new Card[52];
+  private static ArrayList<Card> cards = new ArrayList<Card>(52);
 
   //Constructor
   public Deck() {

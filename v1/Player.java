@@ -1,5 +1,6 @@
 public class Player {
-  private Card[] holeCards = new Card[2];
+  //private Card[] holeCards = new Card[2];
+  private static ArrayList<Card> holeCards = new ArrayList<Card>(2);
 
   public Player(Card hole1, Card hole2) {
     holeCards[0] = hole1;
