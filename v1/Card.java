@@ -7,18 +7,20 @@ public class Card {
   private static short value, suit;
 
   //Constructor
-  public Card(short value, short suit) {
-    this.value = toShort(getRandVal());
-    this.suit = shortSuit(getRandSuit());
+  public Card() {
+    value = toShort(getRandVal());
+    suit = shortSuit(getRandSuit());
   }
 
-  public void setVal(short value) {
-    this.value = toShort(getRandVal());
+/*
+  public void setVal() {
+    value = toShort(getRandVal());
   }
 
-  public void setSuit(short suit) {
-    this.suit = shortSuit(getRandSuit());
+  public void setSuit() {
+    suit = shortSuit(getRandSuit());
   }
+*/
 
   public short getVal() {
     return value;
@@ -41,13 +43,13 @@ public class Card {
   public String toRank(short value) {
     switch(value) {
       case 1:
-        return "A";
+        return "Ace";
       case 11:
-        return "J";
+        return "Jack";
       case 12:
-        return "Q";
+        return "Queen";
       case 13:
-        return "K";
+        return "King";
       default:
         return String.valueOf(value);
     }
@@ -56,13 +58,13 @@ public class Card {
   public static short toShort(String value) {
     //converts values to numerical value (in short)
     switch(value) {
-      case "A":
+      case "Ace":
         return 1;
-      case "J":
+      case "Jack":
         return 11;
-      case "Q":
+      case "Queen":
         return 12;
-      case "K":
+      case "King":
         return 13;
       default:
         return Short.parseShort(value);
