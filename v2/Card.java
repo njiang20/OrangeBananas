@@ -41,7 +41,8 @@ public class Card {
     short b = (short)(Math.random() * (suits.size() - 1)); //random index
     return suits.get(b);
   }
-
+  
+/*
   public static String toRank(short value) {
     switch(value) {
       case 1:
@@ -88,6 +89,7 @@ public class Card {
         return -1;
     }
   } //end charaOfSuit
+*/
 
   public String toString() {
     return value + " of " + suit;
@@ -99,8 +101,6 @@ public class Card {
 
 
   public static void main(String[] args) {
-    System.out.println(getRandVal());
-    System.out.println(getRandSuit());
     System.out.println(printCard());
   }
 
