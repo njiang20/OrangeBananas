@@ -6,7 +6,7 @@ public class Card {
   private static ArrayList<String> suits = new ArrayList<>(Arrays.asList("Diamonds",
     "Clubs", "Hearts", "Spades"));
 
-  private static String value, suit;
+  private String value, suit;
 
   //Constructor
   public Card() {
@@ -24,83 +24,84 @@ public class Card {
   }
 */
 
-  public static String getVal() {
+  public String getVal() {
     return value;
   }
 
-  public static String getSuit() {
+  public String getSuit() {
     return suit;
   }
 
-  public static String getRandVal() {
+  public String getRandVal() {
     short a = (short)(Math.random() * (values.size() - 1)); //random index
     return values.get(a);
   }
 
-  public static String getRandSuit() {
+  public String getRandSuit() {
     short b = (short)(Math.random() * (suits.size() - 1)); //random index
     return suits.get(b);
   }
-/*
-  public static String toRank(short value) {
-    switch(value) {
-      case 1:
-        return "Ace";
-      case 11:
-        return "Jack";
-      case 12:
-        return "Queen";
-      case 13:
-        return "King";
-      default:
-        return String.valueOf(value);
-    }
-  } //end toRank
 
-  public static short toShort(String value) {
-    //converts values to numerical value (in short)
-    switch(value) {
-      case "Ace":
-        return 1;
-      case "Jack":
-        return 11;
-      case "Queen":
-        return 12;
-      case "King":
-        return 13;
-      default:
-        return Short.parseShort(value);
-    }
-  } //end toShort
-
-  public static short shortSuit(String suit) {
-    //converts suits to a numerical equivalent (in short)
-    switch(suit) {
-      case "Diamonds":
-        return 1;
-      case "Clubs":
-        return 2;
-      case "Hearts":
-        return 3;
-      case "Spades":
-        return 4;
-      default:
-        return -1;
-    }
-  } //end charaOfSuit
-*/
   public String toString() {
     return value + " of " + suit;
   }
 
-  public static String printCard() {
+  public String printCard() {
     return getRandVal() + " of " + getRandSuit();
   }
+
+  /*
+    public static String toRank(short value) {
+      switch(value) {
+        case 1:
+          return "Ace";
+        case 11:
+          return "Jack";
+        case 12:
+          return "Queen";
+        case 13:
+          return "King";
+        default:
+          return String.valueOf(value);
+      }
+    } //end toRank
+
+    public static short toShort(String value) {
+      //converts values to numerical value (in short)
+      switch(value) {
+        case "Ace":
+          return 1;
+        case "Jack":
+          return 11;
+        case "Queen":
+          return 12;
+        case "King":
+          return 13;
+        default:
+          return Short.parseShort(value);
+      }
+    } //end toShort
+
+    public static short shortSuit(String suit) {
+      //converts suits to a numerical equivalent (in short)
+      switch(suit) {
+        case "Diamonds":
+          return 1;
+        case "Clubs":
+          return 2;
+        case "Hearts":
+          return 3;
+        case "Spades":
+          return 4;
+        default:
+          return -1;
+      }
+    } //end charaOfSuit
 
   public static void main(String[] args) {
     System.out.println(printCard());
     System.out.println(printCard());
     System.out.println(printCard());
   }
-
+*/
 } //end Card

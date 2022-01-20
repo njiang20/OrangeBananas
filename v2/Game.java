@@ -5,7 +5,6 @@ public class Game {
   private static ArrayList<Card> visCards = new ArrayList<Card>(1);
 
   public static void addCenterCard() {
-    int index = 0;
     if(center.size() <= 3) {
       //center = Arrays.copyOf(center, center.size() + 1);
       //center(index++) = new Card();
