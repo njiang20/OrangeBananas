@@ -9,7 +9,8 @@ public class Game {
     if(center.size() <= 3) {
       //center = Arrays.copyOf(center, center.size() + 1);
       //center(index++) = new Card();
-      center.add(new Card());
+      Card test = new Card();
+      center.add(test);
     }
   }
 
