@@ -4,7 +4,7 @@ public class Card {
   private static String[] values = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
   private static String[] suits = {"Diamonds", "Clubs", "Hearts", "Spades"};
 
-  private short value, suit;
+  private static short value, suit;
 
   //Constructor
   public Card(short value, short suit) {
@@ -13,11 +13,11 @@ public class Card {
   }
 
   public void setVal(short value) {
-    this.value = value;
+    this.value = toShort(getRandVal());
   }
 
   public void setSuit(short suit) {
-    this.suit = suit;
+    this.suit = shortSuit(getRandSuit());
   }
 
   public short getVal() {
@@ -28,17 +28,13 @@ public class Card {
     return suit;
   }
 
-  public String toString() {
-    return value + " of " + suit;
-  }
-
   public static String getRandVal() {
-    short a = (short)(Math.random() * (values.length + 1)); //random index
+    short a = (short)(Math.random() * (values.length - 1)); //random index
     return values[a];
   }
 
   public static String getRandSuit() {
-    short b = (short)(Math.random() * (suits.length + 1)); //random index
+    short b = (short)(Math.random() * (suits.length - 1)); //random index
     return suits[b];
   }
 
@@ -57,7 +53,7 @@ public class Card {
     }
   } //end toRank
 
-  public short toShort(String value) {
+  public static short toShort(String value) {
     //converts values to numerical value (in short)
     switch(value) {
       case "A":
@@ -73,7 +69,7 @@ public class Card {
     }
   } //end toShort
 
-  public short shortSuit(String suit) {
+  public static short shortSuit(String suit) {
     //converts suits to a numerical equivalent (in short)
     switch(suit) {
       case "Diamonds":
@@ -89,10 +85,19 @@ public class Card {
     }
   } //end charaOfSuit
 
+  public String toString() {
+    return value + " of " + suit;
+  }
+
+  public static String printCard() {
+    return values[toShort(getRandVal())] + " of " + suits[shortSuit(getRandSuit())];
+  }
+
   //compare rank + numbers
   public static void main(String[] args) {
     System.out.println(getRandVal());
     System.out.println(getRandSuit());
+    System.out.println(printCard());
   }
 
 
