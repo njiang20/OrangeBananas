@@ -7,18 +7,27 @@ public class Game {
   private static int index = 0;
 
   public static void addCenterCard() {
-    center[index++] = new Card(); //method in Deck.java to get a random card
+    center[index++] = new Card();
   }
 
   public static void addFaceUp() {
     visCards[index++] = new Card();
   }
 
-  public static void printGame() {
-    System.out.println("These are the current cards: ");
-    System.out.println("\nCenter cards: " + center);
-    System.out.println("\nFace-up Cards: " + visCards);
+  public static Card getCenterCard(int x) {
+    return center[x];
   }
+
+  public static Card getFaceUp(int x) {
+    return visCards[x];
+  }
+
+  public static void printGame() {
+    System.out.println("The game contains the following center cards: ");
+    for(int i = 0; i < center.length; i++) {
+      System.out.println(getCenterCard(i).printCard());
+    }
+  } //end printGame
 
   public static void main(String[] args) {
     printGame();

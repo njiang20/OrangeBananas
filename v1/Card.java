@@ -22,11 +22,11 @@ public class Card {
   }
 */
 
-  public short getVal() {
+  public static short getVal() {
     return value;
   }
 
-  public short getSuit() {
+  public static short getSuit() {
     return suit;
   }
 
@@ -40,7 +40,7 @@ public class Card {
     return suits[b];
   }
 
-  public String toRank(short value) {
+  public static String toRank(short value) {
     switch(value) {
       case 1:
         return "Ace";
@@ -95,12 +95,12 @@ public class Card {
     return values[toShort(getRandVal())] + " of " + suits[shortSuit(getRandSuit())];
   }
 
-  //compare rank + numbers
+/*
   public static void main(String[] args) {
     System.out.println(getRandVal());
     System.out.println(getRandSuit());
     System.out.println(printCard());
   }
-
+*/
 
 } //end Card
