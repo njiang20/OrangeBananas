@@ -89,6 +89,6 @@ Nina :: created v2 + updated Card.java + Game.java + Player.java
 
 2022-01-21
 --------------------------------------------------------------
-Russell :: began v3
-  * reworking a lot of things ?
+Russell :: began v3, reworking a lot of things ?
+Nina :: fixed Card, Game, Deck
 ==============================================================
