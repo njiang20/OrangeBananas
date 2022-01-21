@@ -9,11 +9,10 @@ public class Card {
   "8 ", "9 ", "10 ", "Jack ", "Queen ", "King "};
   public static final String[] suits = {"Diamonds", "Clubs", "Hearts", "Spades"};
 
-    public void setCard(int v, int s){//set value and suit of a given card
-      //used to be named set but name conflict with ArrayList
-      this.value = values[v];
-      this.suit = suits[s];
-    }
+  public void setCard(int v, int s){//set value and suit of a given card
+    this.value = values[v];
+    this.suit = suits[s];
+  }
 
   /*//Constructor
   public Card() {

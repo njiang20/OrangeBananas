@@ -7,15 +7,11 @@ public class Game {
   public static void addCenterCard() {
     if(center.size() < 3) { //< not <= or itll add a 4th card
       center.add(new Card());
-      //center = Arrays.copyOf(center, center.size() + 1);
-      //center(index++) = new Card();
     }
   } //end addCenterCard
 
   public static void addFaceUp() {
     if(visCards.size() < 3) {
-      //visCards = Arrays.copyOf(visCards, visCards.size() + 1);
-      //visCards(index++) = new Card();
       visCards.add(new Card());
     }
   }
@@ -45,18 +41,5 @@ public class Game {
     }
     return plFaceUp;
   } //end printFaceUp
-
-  public static void main(String[] args) {
-    addCenterCard();
-    addFaceUp();
-    addCenterCard();
-    addFaceUp();
-    addCenterCard();
-    addFaceUp();
-    addCenterCard();
-    addFaceUp();
-    System.out.println(printCenter());
-    System.out.println(printFaceUp());
-  }
 
 } //end Game

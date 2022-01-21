@@ -84,7 +84,7 @@ Russell :: v1.5 ??
 
 2022-01-20
 --------------------------------------------------------------
-Nina :: created v2 + updated Card.java + Game.java
+Nina :: created v2 + updated Card.java + Game.java + Player.java
 ==============================================================
 
 2022-01-21
