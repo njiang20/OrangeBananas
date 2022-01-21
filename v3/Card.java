@@ -39,21 +39,21 @@ public class Card {
   }
 
   public String getRandVal() {
-    short a = (short)(Math.random() * values.length ); //random index
-    return values[a];
+    short a = (short)(Math.random() * values.size() ); //random index
+    return values.get(a);
   }
 
   public String getRandSuit() {
-    short b = (short)(Math.random() * suits.length ); //random index
-    return suits[b];
+    short b = (short)(Math.random() * suits.size() ); //random index
+    return suits.get(b);
   }
 
   public String toString() {//override
-    return value + "of " + suit;
+    return value + " of " + suit;
   }
 
   public String printCard() {
-    return getRandVal() + "of " + getRandSuit();
+    return getRandVal() + " of " + getRandSuit();
   }
 
 } //end Card

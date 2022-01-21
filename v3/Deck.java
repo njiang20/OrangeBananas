@@ -2,13 +2,13 @@ import java.util.*;
 
 public class Deck {
   //public Card[] cards = new Card[52];
-  private static ArrayList<Card> deck = new ArrayList<Card>();
+  private static ArrayList<Card> deck = new ArrayList<Card>(1);
 
   //Constructor
   public Deck(){//constructor
-    for(int i = 0; i < 52; i++) {
-      for (int v = 0; v < 11; v++ ){//for every value
-        for (int s = 0; s < 3; s++){//for every suit
+    for(int i = 0; i < 51; i++) {
+      for (int v = 0; v < 13; v++ ){//for every value
+        for (int s = 0; s < 4; s++){//for every suit
           deck.add(new Card(v, s));
         }
       }
@@ -21,7 +21,7 @@ public class Deck {
 
   public static String printDeck() {//prints deck by itering
     String plDeck = "";
-    for(int i = 0; i < deck.size(); i++) {
+    for(int i = 0; i < 52; i++) {
       plDeck += (getDeckCard(i).toString() + "\t");
     }
     return plDeck;
