@@ -9,7 +9,7 @@ public class Deck {
     int i = 0;
     for(short a = 0; a < 4; a++) {
       for(short b = 0; b < 13; b++) {
-        cards[i++] = new Card(a, b);
+        cards[i++] = new Card();
       }
     }
   }

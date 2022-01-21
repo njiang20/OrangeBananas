@@ -28,7 +28,7 @@ public class Woo {
 
   public boolean playRound() {
     //starts rounds > deal one faceup card + one card in center
-    System.out.println("Hole cards: " + hole1 + hole2 + "\nCenter cards: " + center);
+    System.out.println("Hole cards: " + /*printHoleCards*/ + "\nCenter cards: " + printCenter);
 
     System.out.println("Would you like to place a bet now? (Y/N)");
     try {
@@ -47,7 +47,7 @@ public class Woo {
     }
 
     addCenterCard();
-    addFaceUp();
+    addFaceUp(); //printFaceUp
 
     //add new cards
 

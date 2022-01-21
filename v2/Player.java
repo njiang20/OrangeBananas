@@ -1,21 +1,36 @@
+import java.util.*;
+
 public class Player {
   //private Card[] holeCards = new Card[2];
-  private static ArrayList<Card> holeCards = new ArrayList<Card>(2);
+  private static ArrayList<Card> holeCards = new ArrayList<Card>();
 
-  public Player(Card hole1, Card hole2) {
-    holeCards[0] = hole1;
-    holeCards[1] = hole2;
+/*  //constructor
+  public Player() {
+
   }
-
-  public void printPlayerCards() {
-    System.out.println("Hole cards: ");
-    for(int i = 0; i < 2; i++) {
-      System.out.println(holeCards[i] + "\n");
+*/
+  public static void addHoleCards() {
+    while(holeCards.size() < 2) {
+      holeCards.add(new Card());
     }
   }
 
-  public Card getCard(int num) {
-    return holeCards[num];
+  public static Card getHoleCards(int a) {
+    return holeCards.get(a);
   }
+
+  public static String printHoleCards() {
+    System.out.println("Hole cards: ");
+    String plHole = "";
+    for(int i = 0; i < holeCards.size(); i++) {
+      plHole += (getHoleCards(i).toString() + "\t\t");
+    }
+    return plHole;
+  } //end printHoleCards
+
+  public static void main(String[] args) {
+    addHoleCards();
+    System.out.println(printHoleCards());
+  } //end main
 
 } //end Player

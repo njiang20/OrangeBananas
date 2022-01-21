@@ -13,7 +13,6 @@ public class Game {
   } //end addCenterCard
 
   public static void addFaceUp() {
-    int index = 0;
     if(visCards.size() <= 3) {
       //visCards = Arrays.copyOf(visCards, visCards.size() + 1);
       //visCards(index++) = new Card();
