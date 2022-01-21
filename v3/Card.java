@@ -28,6 +28,8 @@ public class Card {
     suit = shortSuit(getRandSuit());
   }*/
 
+//move to deck.java bc getters have
+/*
   public String getVal() {
     return this.value;
   }
@@ -44,7 +46,7 @@ public class Card {
   public String randSuit() {
     short b = (short)(Math.random() * suits.length ); //random index
     return suits[b];
-  }
+  }*/
 
   public String toString() {//override
     return this.value + "of " + this.suit;

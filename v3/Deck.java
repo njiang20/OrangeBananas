@@ -5,7 +5,7 @@ public class Deck {
   private static ArrayList<Card> Deck = new ArrayList<Card>(52);
 
   //Constructor
-  public void Deck(){//constructor
+  public Deck(){//constructor
     int i = 0;
     for (int s = 0; s < 3; s++){//for every suit
 
@@ -15,6 +15,12 @@ public class Deck {
       }
     }
   }
+
+  public static void printDeck() {//prints deck by itering
+    for(int i = 0; i < Deck.size(); i++) {
+      System.out.println(Deck.get(i));
+    }
+  } //end Deck
 /*
   public Deck() {
     int i = 0;
@@ -62,5 +68,8 @@ public class Deck {
   }
 */
 
-
+public static void main(String[] args) {
+  Deck bob = new Deck();
+  printDeck();
+}
 } //end Deck
