@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Game {
+  private static ArrayList<Card> Deck = new Deck();
   private static ArrayList<Card> center = new ArrayList<Card>(1);
   private static ArrayList<Card> visCards = new ArrayList<Card>(1);
 
