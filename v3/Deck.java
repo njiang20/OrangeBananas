@@ -2,24 +2,27 @@ import java.util.*;
 
 public class Deck {
   //public Card[] cards = new Card[52];
-  private static ArrayList<Card> Deck = new ArrayList<Card>(52);
+  private static ArrayList<Card> deck = new ArrayList<Card>();
 
   //Constructor
   public Deck(){//constructor
-    int i = 0;
-    for (int s = 0; s < 3; s++){//for every suit
-
-      for (int v = 0; v < 11; v++ ){//for every value
-        Deck.get(i).setCard(v, s);
-        i++;
+    for(int i = 0; i < 52; i++) {
+      //for (int v = 0; v < 11; v++ ){//for every value
+        //for (int s = 0; s < 3; s++){//for every suit
+          deck.add(new Card());
+        }
       }
-    }
+
+  public static Card getDeckCard(int x) {
+    return deck.get(x);
   }
 
-  public static void printDeck() {//prints deck by itering
-    for(int i = 0; i < Deck.size(); i++) {
-      System.out.println(Deck.get(i));
+  public static String printDeck() {//prints deck by itering
+    String plDeck = "";
+    for(int i = 0; i < deck.size(); i++) {
+      plDeck += (getDeckCard(i).toString() + "\t");
     }
+    return plDeck;
   } //end Deck
 /*
   public Deck() {
@@ -68,8 +71,8 @@ public class Deck {
   }
 */
 
-public static void main(String[] args) {
-  Deck bob = new Deck();
-  printDeck();
-}
+  public static void main(String[] args) {
+    Deck test = new Deck();
+    System.out.println(printDeck());
+  }
 } //end Deck
