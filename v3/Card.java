@@ -5,9 +5,10 @@ public class Card {
   private String value, suit;
 
   //constants
-  public static final String[] values = {"Ace ", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ",
-  "8 ", "9 ", "10 ", "Jack ", "Queen ", "King "};
-  public static final String[] suits = {"Diamonds", "Clubs", "Hearts", "Spades"};
+  private final static ArrayList<String> values = new ArrayList<>(Arrays.asList("Ace",
+    "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"));
+  private final static ArrayList<String> suits = new ArrayList<>(Arrays.asList("Diamonds",
+    "Clubs", "Hearts", "Spades"));
 /*
   public Card(int v, int s){//set value and suit of a given card
     this.value = values[v];
@@ -16,9 +17,9 @@ public class Card {
 */
 
   //Constructor
-  public Card() {
-    value = getRandVal();
-    suit = getRandSuit();
+  public Card(int v, int s) {
+    value = getVal(v);
+    suit = getSuit(s);
   }
 /*
   public void setVal() {
@@ -29,12 +30,12 @@ public class Card {
     suit = shortSuit(getRandSuit());
   }
 */
-  public String getVal() {
-    return value;
+  public String getVal(int x) {
+    return values.get(x);
   }
 
-  public String getSuit() {
-    return suit;
+  public String getSuit(int x) {
+    return suits.get(x);
   }
 
   public String getRandVal() {

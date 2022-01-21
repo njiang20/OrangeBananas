@@ -7,11 +7,13 @@ public class Deck {
   //Constructor
   public Deck(){//constructor
     for(int i = 0; i < 52; i++) {
-      //for (int v = 0; v < 11; v++ ){//for every value
-        //for (int s = 0; s < 3; s++){//for every suit
-          deck.add(new Card());
+      for (int v = 0; v < 11; v++ ){//for every value
+        for (int s = 0; s < 3; s++){//for every suit
+          deck.add(new Card(v, s));
         }
       }
+    }
+  }
 
   public static Card getDeckCard(int x) {
     return deck.get(x);
