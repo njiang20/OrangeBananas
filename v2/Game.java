@@ -20,7 +20,7 @@ public class Game {
     }
   }
 
-  public static Card getCenterCard(int x) {
+  public static Card getCenterCard(int x) { //gets the card at that index :: used in printCenter
     return center.get(x);
   }
 
