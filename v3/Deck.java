@@ -2,19 +2,32 @@ import java.util.*;
 
 public class Deck {
   //public Card[] cards = new Card[52];
-  private static ArrayList<Card> cards = new ArrayList<Card>(52);
+  private static ArrayList<Card> Deck = new ArrayList<Card>(52);
 
   //Constructor
+  public void Deck(){//constructor
+    int i = 0;
+    for (int s = 0; s < 3; s++){//for every suit
+
+      for (int v = 0; v < 11; v++ ){//for every value
+        Deck.get(i).setCard(v, s);
+        i++;
+      }
+    }
+  }
+/*
   public Deck() {
     int i = 0;
     for(short a = 0; a < 4; a++) {
       for(short b = 0; b < 13; b++) {
-        cards[i++] = new Card();
+        Deck[i++] = new Card();
       }
     }
   }
+*/
 
 
+/*
   public void sortDeck() {
     for(int i = 0; i < cards.length; i++) {
       for(int j = cards.length; j > i; j--) {
@@ -27,7 +40,6 @@ public class Deck {
     }
   } //end sortDeck
 
-/*
   int[][] track[14][1];
 
   public static void deckInfo() {

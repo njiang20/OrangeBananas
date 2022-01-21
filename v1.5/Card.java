@@ -13,7 +13,7 @@ public class Card {
     this.suit = suits[s];
   }
 
-  public String stringify(){//returns string version of a given card
+  public String toString(){//returns string version of a given card
     return (this.value + "of " + this.suit);
   }
 
