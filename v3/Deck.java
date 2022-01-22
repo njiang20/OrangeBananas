@@ -19,6 +19,14 @@ public class Deck {
     return deck.get(x);
   }
 
+  public static void removeCard(int x) {
+    deck.remove(x);
+  }
+
+  public static void shuffle() {
+    Collections.shuffle(deck);
+  }
+
   public static String printDeck() {//prints deck by itering
     String plDeck = "";
     for(int i = 0; i < 52; i++) {
@@ -26,10 +34,6 @@ public class Deck {
     }
     return plDeck;
   } //end Deck
-
-  public static void shuffle() {
-    Collections.shuffle(deck);
-  }
 
 /*
   public static void shuffle() {
@@ -65,8 +69,6 @@ public class Deck {
 
   public static void main(String[] args) {
     Deck test = new Deck();
-    //System.out.println(printDeck());
-    //Collections.shuffle(deck);
     shuffle();
     System.out.println(printDeck());
   }
