@@ -6,7 +6,7 @@ public class Game {
 
   private static Deck thisDeck  = new Deck();
 
-  public Game() {
+  public Game(Deck deck) {
     thisDeck.shuffle();
     addCenterCard();
     addFaceUp();
@@ -37,7 +37,7 @@ public class Game {
   public static String printCenter() {
     String plCenter = "";
     for(int i = 0; i < center.size(); i++) {
-      plCenter += (getCenterCard(i).toString() + "\t\t");
+      plCenter += (getCenterCard(i).toString() + "\t");
     }
     return plCenter;
   } //end printCenter
@@ -45,7 +45,7 @@ public class Game {
   public static String printFaceUp() {
     String plFaceUp = "";
     for(int i = 0; i < center.size(); i++) {
-      plFaceUp += (getFaceUp(i).toString() + "\t\t");
+      plFaceUp += (getFaceUp(i).toString() + "\t");
     }
     return plFaceUp;
   } //end printFaceUp
@@ -57,7 +57,7 @@ public class Game {
   }
 
   public static void main(String[] args) {
-    Game game = new Game();
+    Game game = new Game(thisDeck);
     System.out.println(printGame());
   }
 

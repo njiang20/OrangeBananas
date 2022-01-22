@@ -12,6 +12,10 @@ public class Woo {
   private InputStreamReader isr;
   private BufferedReader in;
 
+  private Deck deck = new Deck();
+  private Game game = new Game();
+  private Player player = new Player();
+
   public Woo() {
     bet = 0;
     burn = false;
@@ -28,7 +32,7 @@ public class Woo {
 
   public boolean playRound() {
     //starts rounds > deal one faceup card + one card in center
-    System.out.println("Hole cards: " + /*printHoleCards*/ + "\nCenter cards: " + printCenter);
+    System.out.println("Hole cards: " + player.printHoleCards() + "\nCenter cards: " + game.printCenter());
 
     System.out.println("Would you like to place a bet now? (Y/N)");
     try {
@@ -39,15 +43,12 @@ public class Woo {
     if(choice.equals("Y")) {
       System.out.println("How much would you like to bet? Current funds: " + funds);
       try {
-        bet = in.readLine();
+        bet = Integer.parseInt(in.readLine());
       }
       catch(IOException e) {}
 
       funds -= bet;
     }
-
-    addCenterCard();
-    addFaceUp(); //printFaceUp
 
     //add new cards
 
