@@ -95,5 +95,5 @@ Nina :: fixed Card, Game, Deck
 
 2022-01-22
 --------------------------------------------------------------
-Nina :: randomized Deck
+Nina :: randomized Deck, fixed center + faceup cards for Game
 ==============================================================
