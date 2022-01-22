@@ -6,8 +6,8 @@ public class Game {
 
   public static void addCenterCard() {
     if(center.size() < 2) { //< not <= or itll add a 4th card
-      for (int v = 0; v < 13; v++ ){//for every value
-        for (int s = 0; s < 4; s++){
+      for (int v = 0; v < 13; v++) {//for every value
+        for (int s = 0; s < 4; s++) {
           center.add(new Card(v, s));
         }
       }
