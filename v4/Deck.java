@@ -1,7 +1,6 @@
 import java.util.*;
 
 public class Deck {
-  //public Card[] cards = new Card[52];
   private static ArrayList<Card> deck = new ArrayList<Card>();
 
   //Constructor
@@ -36,14 +35,6 @@ public class Deck {
   } //end Deck
 
 /*
-  public static void shuffle() {
-    for(int i = 0; i < 10; i++) {
-      int a = (int)(Math.random() * (deck.size() + 1));
-      int b = (int)(Math.random() * (deck.size() + 1));
-      deck.add(a, deck.remove(b));
-    }
-  } //end shuffle
-
 
     int[][] track[14][1];
 

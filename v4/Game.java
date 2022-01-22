@@ -13,10 +13,7 @@ public class Game {
   }
 
   public static void addCenterCard() {
-    if(center.size() < 2) { //< not <= or itll add a 4th card
-      //for (int v = 0; v < 13; v++) {//for every value
-        //for (int s = 0; s < 4; s++) {
-          //center.add(new Card(v, s));
+    if(center.size() < 2) {
       center.add(thisDeck.getDeckCard(0));
       thisDeck.removeCard(0);
     }
@@ -24,9 +21,6 @@ public class Game {
 
   public static void addFaceUp() {
     if(visCards.size() < 2) {
-      //for (int v = 0; v < 13; v++ ){//for every value
-        //for (int s = 0; s < 4; s++){
-          //visCards.add(new Card(v, s));
       visCards.add(thisDeck.getDeckCard(0));
       thisDeck.removeCard(0);
     }
@@ -41,7 +35,6 @@ public class Game {
   }
 
   public static String printCenter() {
-    System.out.println("The game contains the following center cards: ");
     String plCenter = "";
     for(int i = 0; i < center.size(); i++) {
       plCenter += (getCenterCard(i).toString() + "\t\t");
@@ -50,7 +43,6 @@ public class Game {
   } //end printCenter
 
   public static String printFaceUp() {
-    System.out.println("Your hand contains the following face-up cards: ");
     String plFaceUp = "";
     for(int i = 0; i < center.size(); i++) {
       plFaceUp += (getFaceUp(i).toString() + "\t\t");
@@ -58,11 +50,15 @@ public class Game {
     return plFaceUp;
   } //end printFaceUp
 
+  public static String printGame() {
+    String a = printCenter();
+    String b = printFaceUp();
+    return "The game contains the following center cards: " + a + "\n" + "Your hand contains the following face-up cards: " + b;
+  }
+
   public static void main(String[] args) {
     Game game = new Game();
-    //System.out.println(thisDeck.printDeck());
-    System.out.println(printCenter());
-    System.out.println(printFaceUp());
+    System.out.println(printGame());
   }
 
 } //end Game

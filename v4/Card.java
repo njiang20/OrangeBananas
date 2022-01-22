@@ -9,27 +9,13 @@ public class Card {
     "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"));
   private final static ArrayList<String> suits = new ArrayList<>(Arrays.asList("Diamonds",
     "Clubs", "Hearts", "Spades"));
-/*
-  public Card(int v, int s){//set value and suit of a given card
-    this.value = values[v];
-    this.suit = suits[s];
-  }
-*/
 
   //Constructor
   public Card(int v, int s) {
     value = getVal(v);
     suit = getSuit(s);
   }
-/*
-  public void setVal() {
-    value = toShort(getRandVal());
-  }
 
-  public void setSuit() {
-    suit = shortSuit(getRandSuit());
-  }
-*/
   public String getVal(int x) {
     return values.get(x);
   }
