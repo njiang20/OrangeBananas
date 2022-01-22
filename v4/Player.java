@@ -30,10 +30,10 @@ public class Player {
     }
     return plHole;
   } //end printHoleCards
-
+/*
   public static void main(String[] args) {
     Player player = new Player(thisDeck);
     System.out.println(printHoleCards());
   } //end main
-
+*/
 } //end Player

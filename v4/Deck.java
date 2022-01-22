@@ -57,11 +57,11 @@ public class Deck {
   	  //then just find the max count, then consider flush and straight
     }
   */
-
+/*
   public static void main(String[] args) {
     Deck test = new Deck();
     shuffle();
     System.out.println(printDeck());
   }
-
+*/
 } //end Deck
