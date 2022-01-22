@@ -8,6 +8,8 @@ public class Game {
 
   public Game() {
     thisDeck.shuffle();
+    addCenterCard();
+    addFaceUp();
   }
 
   public static void addCenterCard() {
@@ -59,8 +61,6 @@ public class Game {
   public static void main(String[] args) {
     Game game = new Game();
     //System.out.println(thisDeck.printDeck());
-    addCenterCard();
-    addFaceUp();
     System.out.println(printCenter());
     System.out.println(printFaceUp());
   }
