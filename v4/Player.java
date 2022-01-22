@@ -23,7 +23,7 @@ public class Player {
   }
 
   public static String printHoleCards() {
-    System.out.println("Hole cards: ");
+    System.out.println("Your hand has the following hole cards: ");
     String plHole = "";
     for(int i = 0; i < holeCards.size(); i++) {
       plHole += (getHoleCards(i).toString() + "\t");

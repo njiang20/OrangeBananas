@@ -4,7 +4,7 @@ public class Deck {
   private static ArrayList<Card> deck = new ArrayList<Card>();
 
   //Constructor
-  public Deck(){//constructor
+  public Deck() {//constructor
     for(int i = 0; i < 51; i++) {
       for (int v = 0; v < 13; v++) {//for every value
         for (int s = 0; s < 4; s++) {//for every suit

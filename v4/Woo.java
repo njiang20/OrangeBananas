@@ -4,7 +4,7 @@ import java.io.*;
 public class Woo {
   public final static int totRounds = 3;
 
-  private int funds;
+  private int funds = 1000;
   private int bet;
   private boolean burn;
   private String choice;
@@ -13,8 +13,8 @@ public class Woo {
   private BufferedReader in;
 
   private Deck deck = new Deck();
-  private Game game = new Game();
-  private Player player = new Player();
+  private Game game = new Game(deck);
+  private Player player = new Player(deck);
 
   public Woo() {
     bet = 0;
@@ -32,7 +32,7 @@ public class Woo {
 
   public boolean playRound() {
     //starts rounds > deal one faceup card + one card in center
-    System.out.println("Hole cards: " + player.printHoleCards() + "\nCenter cards: " + game.printCenter());
+    System.out.println(player.printHoleCards() + "\n" + game.printGame());
 
     System.out.println("Would you like to place a bet now? (Y/N)");
     try {
@@ -40,17 +40,36 @@ public class Woo {
     }
     catch(IOException e) {}
 
-    if(choice.equals("Y")) {
-      System.out.println("How much would you like to bet? Current funds: " + funds);
-      try {
-        bet = Integer.parseInt(in.readLine());
+      while(choice.equals("Y")) {
+        System.out.println("How much would you like to bet? Current funds: " + funds);
+
+        try {
+          bet = Integer.parseInt(in.readLine());
+        }
+        catch(IOException e) {}
+
+        if(bet <= funds) {
+          funds -= bet;
+          game.addCenterCard();
+          game.addFaceUp();
+          break;
+        } else {
+          System.out.println("You do not have enough funds.");
+        } //end if else
+
+      } //end while loop
+
+      if(choice.equals("N")) {
+        System.out.println("Let's start the next round!");
+        game.addCenterCard();
+        game.addFaceUp();
       }
-      catch(IOException e) {}
 
-      funds -= bet;
-    }
+      while(!(choice.equals("N")) && !(choice.equals("Y"))) {
+        System.out.println("Please input either Y or N");
+      }
 
-    //add new cards
+    return true;
 
   } //end playRound
 

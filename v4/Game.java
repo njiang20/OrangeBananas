@@ -13,14 +13,14 @@ public class Game {
   }
 
   public static void addCenterCard() {
-    if(center.size() < 2) {
+    if(center.size() < 3) {
       center.add(thisDeck.getDeckCard(0));
       thisDeck.removeCard(0);
     }
   } //end addCenterCard
 
   public static void addFaceUp() {
-    if(visCards.size() < 2) {
+    if(visCards.size() < 3) {
       visCards.add(thisDeck.getDeckCard(0));
       thisDeck.removeCard(0);
     }
@@ -55,10 +55,10 @@ public class Game {
     String b = printFaceUp();
     return "The game contains the following center cards: " + a + "\n" + "Your hand contains the following face-up cards: " + b;
   }
-
+/*
   public static void main(String[] args) {
     Game game = new Game(thisDeck);
     System.out.println(printGame());
   }
-
+*/
 } //end Game
