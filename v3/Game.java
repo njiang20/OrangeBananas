@@ -57,7 +57,7 @@ public class Game {
   } //end printFaceUp
 
   public static void main(String[] args) {
-    thisDeck.shuffle();
+    Game game = new Game();
     //System.out.println(thisDeck.printDeck());
     addCenterCard();
     addFaceUp();
