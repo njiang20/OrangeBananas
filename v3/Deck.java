@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Deck {
   //public Card[] cards = new Card[52];
-  private static ArrayList<Card> deck = new ArrayList<Card>(1);
+  private static ArrayList<Card> deck = new ArrayList<Card>();
 
   //Constructor
   public Deck(){//constructor
@@ -13,7 +13,7 @@ public class Deck {
         }
       }
     }
-  }
+  } //end Deck
 
   public static Card getDeckCard(int x) {
     return deck.get(x);
@@ -26,55 +26,49 @@ public class Deck {
     }
     return plDeck;
   } //end Deck
-/*
-  public Deck() {
-    int i = 0;
-    for(short a = 0; a < 4; a++) {
-      for(short b = 0; b < 13; b++) {
-        Deck[i++] = new Card();
-      }
-    }
-  }
-*/
 
+  public static void shuffle() {
+    Collections.shuffle(deck);
+  }
 
 /*
-  public void sortDeck() {
-    for(int i = 0; i < cards.length; i++) {
-      for(int j = cards.length; j > i; j--) {
-        if(cards.getVal(j) < cards.getVal(j - 1)) {
-          int temp = (int)cards.getVal(j);
-          cards.set(j, cards.get(j - 1));
-          cards.set(j - 1, temp);
-        }
-      }
+  public static void shuffle() {
+    for(int i = 0; i < 10; i++) {
+      int a = (int)(Math.random() * (deck.size() + 1));
+      int b = (int)(Math.random() * (deck.size() + 1));
+      deck.add(a, deck.remove(b));
     }
-  } //end sortDeck
+  } //end shuffle
 
-  int[][] track[14][1];
 
-  public static void deckInfo() {
-	  for(int i = 0; i < 13; i++) {
-		  track[i][0] = 0;
-	  }
+    int[][] track[14][1];
 
-	  for(int i = 0;i < 8; i++){
-		  for(int j = 0; j < 13; i++){
-				if (cards[i].equals(j)) {
-					int count = track[j][0];
-					track[j][0] = count + 1;
-				}
-		  }
-	  }
-  }
+    public static void deckInfo() {
+  	  for(int i = 0; i < 13; i++) {
+  		  track[i][0] = 0;
+  	  }
 
-  public static int[] optimalcombo(int[] a){
-	  //then just find the max count, then consider flush and straight
-  }
-*/
+  	  for(int i = 0;i < 8; i++){
+  		  for(int j = 0; j < 13; i++){
+  				if (cards[i].equals(j)) {
+  					int count = track[j][0];
+  					track[j][0] = count + 1;
+  				}
+  		  }
+  	  }
+    }
+
+    public static int[] optimalcombo(int[] a){
+  	  //then just find the max count, then consider flush and straight
+    }
+  */
 
   public static void main(String[] args) {
     Deck test = new Deck();
+    //System.out.println(printDeck());
+    //Collections.shuffle(deck);
+    shuffle();
     System.out.println(printDeck());
   }
+
 } //end Deck

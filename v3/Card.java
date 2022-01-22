@@ -39,12 +39,12 @@ public class Card {
   }
 
   public String getRandVal() {
-    short a = (short)(Math.random() * values.size() ); //random index
+    int a = (int)(Math.random() * values.size() ); //random index
     return values.get(a);
   }
 
   public String getRandSuit() {
-    short b = (short)(Math.random() * suits.size() ); //random index
+    int b = (int)(Math.random() * suits.size() ); //random index
     return suits.get(b);
   }
 
