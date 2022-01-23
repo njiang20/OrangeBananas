@@ -14,18 +14,16 @@ public class Woo {
   private Game game = new Game(deck);
 
   private Player player = new Player(deck);
-  private int funds;
+  private int funds = 10000;
   private int bet;
 
   private Player playerAI = new Player(deck);
-  private int fundsAI;
+  private int fundsAI = 10000;
   private int betAI;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public Woo() {
-    funds = 10000;
-    fundsAI = 10000;
     bet = 0;
     burn = false;
     isr = new InputStreamReader( System.in );
