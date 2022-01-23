@@ -14,16 +14,18 @@ public class Woo {
   private Game game = new Game(deck);
 
   private Player player = new Player(deck);
-  private int funds = 10000;
+  private int funds;
   private int bet;
 
   private Player playerAI = new Player(deck);
-  private int fundsAI = 10000;
+  private int fundsAI;
   private int betAI;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public Woo() {
+    funds = 10000;
+    fundsAI = 10000;
     bet = 0;
     burn = false;
     isr = new InputStreamReader( System.in );
@@ -38,7 +40,9 @@ public class Woo {
   } //end newGame
 
   public boolean playRound() {
-    System.out.println("This is your current hand: \n" + player.printHand());
+    System.out.println("This is your current hand:");
+    System.out.println(player.printHoleCards());
+    System.out.println(player.printFaceUp());
     System.out.println(game.printCenter());
 
     System.out.println("Would you like to place a bet now? (Y/N)");
@@ -51,7 +55,7 @@ public class Woo {
         System.out.println("How much would you like to bet? Current funds: " + funds);
 
         try {
-          bet = Integer.parseInt(in.readLine());
+          bet += Integer.parseInt(in.readLine());
         }
         catch(IOException e) {}
 
@@ -85,9 +89,10 @@ public class Woo {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public boolean AIRound() {
+    System.out.println("AI " + playerAI.printFaceUp());
     int i = (int)(Math.random());
     if(i == 0) { //yes
-      betAI = (int)(Math.random() * fundsAI);
+      betAI += (int)(Math.random() * fundsAI);
       fundsAI -= betAI;
       playerAI.addFaceUp();
     } else { //no

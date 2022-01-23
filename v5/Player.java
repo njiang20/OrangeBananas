@@ -41,7 +41,7 @@ public class Player {
     for(int i = 0; i < holeCards.size(); i++) {
       plHole += (getHoleCards(i).toString() + "\t");
     }
-    return plHole;
+    return "Hole cards: " + plHole;
   } //end printHoleCards
 
   public String printFaceUp() {
@@ -49,14 +49,8 @@ public class Player {
     for(int i = 0; i < visCards.size(); i++) {
       plFaceUp += (getFaceUp(i).toString() + "\t");
     }
-    return plFaceUp;
+    return "Face-up cards: " + plFaceUp;
   } //end printFaceUp
-
-  public String printHand() {
-    String a = printHoleCards();
-    String b = printFaceUp();
-    return "Hole cards: " + a + "\n" + "Face-up cards: " + b;
-  }
 
 
 /*
