@@ -4,11 +4,11 @@ public class Player {
   private ArrayList<Card> holeCards = new ArrayList<Card>();
   private ArrayList<Card> visCards = new ArrayList<Card>();
 
-  private Deck thisDeck  = new Deck();
-  private Game thisGame = new Game(thisDeck);
+  private Deck thisDeck = new Deck();
 
   //constructor
   public Player(Deck deck) {
+    thisDeck = deck;
     thisDeck.shuffle();
     addHoleCards();
     addFaceUp();

@@ -3,9 +3,10 @@ import java.util.*;
 public class Game {
   private ArrayList<Card> center = new ArrayList<Card>();
 
-  private Deck thisDeck  = new Deck();
+  private Deck thisDeck = new Deck();
 
   public Game(Deck deck) {
+    thisDeck = deck;
     thisDeck.shuffle();
     addCenterCard();
   }
