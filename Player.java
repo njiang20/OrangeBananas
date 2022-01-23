@@ -4,27 +4,27 @@ public class Player {
   private ArrayList<Card> holeCards = new ArrayList<Card>();
   private ArrayList<Card> visCards = new ArrayList<Card>();
 
-  private Deck thisDeck = new Deck();
+  private Deck deck = new Deck();
 
   //constructor
   public Player(Deck deck) {
-    thisDeck = deck;
-    thisDeck.shuffle();
+    this.deck = deck;
+    deck.shuffle();
     addHoleCards();
     addFaceUp();
   }
 
   public void addHoleCards() {
     while(holeCards.size() < 2) {
-      holeCards.add(thisDeck.getDeckCard(0));
-      thisDeck.removeCard(0);
+      holeCards.add(deck.getDeckCard(0));
+      deck.removeCard(0);
     }
   }
 
   public void addFaceUp() {
     if(visCards.size() < 3) {
-      visCards.add(thisDeck.getDeckCard(0));
-      thisDeck.removeCard(0);
+      visCards.add(deck.getDeckCard(0));
+      deck.removeCard(0);
     }
   } //end addFaceUp
 
@@ -55,7 +55,7 @@ public class Player {
 
 /*
   public static void main(String[] args) {
-    Player player = new Player(thisDeck);
+    Player player = new Player(deck);
     System.out.println(printHoleCards());
   } //end main
 */
