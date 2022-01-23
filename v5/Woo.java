@@ -149,11 +149,6 @@ public class Woo {
     return true;
   }
 
-
-  //public static String compareHands() {
-
-  //}
-
   public static void main(String[] args) {
     Woo game = new Woo();
     int rounds = 0;
@@ -163,7 +158,7 @@ public class Woo {
       rounds++;
       System.out.println();
       System.out.println("All the cards have been dealt! Time to compare the hands.");
-    }
+    } //end while loop
 
     int i = 0;
     while(i < 1) {
@@ -171,12 +166,7 @@ public class Woo {
         break;
         i++;
         System.out.println();
-    }
-    //compareHands();
-
-
-  //  System.out.println(playerHand());
-  //  System.out.println(AIHand());
+    } //end while loop
 
   } //end main
 
