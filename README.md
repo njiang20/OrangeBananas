@@ -1,7 +1,7 @@
 # OrangeBananas
 **Team Orange Bananas:**
 **Roster:** Nina Jiang, Zhengxi He, Russell Goychayev
-**Song of the Week: Kapustin Etudes Op. 40**
+## Song of the Week: Kapustin Etudes Op. 40
 
 ## Project Description
 **What is this code for?**
