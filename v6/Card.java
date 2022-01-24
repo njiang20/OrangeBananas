@@ -12,37 +12,45 @@ public class Card {
 
   //Constructor
   public Card(int v, int s) {
+    //constructor with 2 inputs that correspond to the indexes
+    // of ArrayLists val and suits.
     value = getVal(v);
     suit = getSuit(s);
   }
 
   public String getVal(int x) {
+    //returns the val at index x
     return values.get(x);
   }
 
   public String getSuit(int x) {
+    //returns the suit at index x
     return suits.get(x);
   }
 
   public String getRandVal() {
-    int a = (int)(Math.random() * values.size() ); //random index
+    //getRandVal(): returns a random val
+    int a = (int)(Math.random() * values.size() );
     return values.get(a);
   }
 
   public String getRandSuit() {
-    int b = (int)(Math.random() * suits.size() ); //random index
+    //returns a random suit
+    int b = (int)(Math.random() * suits.size() );
     return suits.get(b);
   }
 
-  public String toString() {//override
-    return value + " of " + suit;
+  public String toString() {
+    //overridden toString, returns string form of a given Card. For ex, 2 of Clubs
+    return this.value + " of " + this.suit;
   }
 
-  public String printCard() {
+  /*public String randCard() {//prev was printCard
     return getRandVal() + " of " + getRandSuit();
-  }
+  }*/
 
   public String toRank(short value) {
+    //takes a given short value and returns the corresponding string
     switch(value) {
       case 1:
         return "Ace";
@@ -58,7 +66,7 @@ public class Card {
   } //end toRank
 
   public int toInt(String value) {
-    //converts values to numerical value
+    //takes a given int value and returns the corresponding int
     switch(value) {
       case "Ace":
         return 1;

@@ -95,5 +95,6 @@ Nina :: fixed Card, Game, Deck
 
 2022-01-22
 --------------------------------------------------------------
-Nina :: randomized Deck, fixed center + faceup cards for Game, made v4 + v5, created AI in woo + compiled
+Nina :: randomized Deck, fixed center + faceup cards for Game, made v4 + v5,
+created AI in woo + compiled
 ==============================================================

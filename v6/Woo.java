@@ -12,7 +12,7 @@ public class Woo {
   private BufferedReader in;
 
   private Deck deck = new Deck();
-  private Game game = new Game(deck);
+  private Game game = new Game();
 
   private Player player = new Player(deck);
   private int funds = 100000;
@@ -42,8 +42,8 @@ public class Woo {
 
   public boolean playRound() {
     System.out.println("This is your current hand:");
-    System.out.println(player.printHoleCards());
-    System.out.println(player.printFaceUp());
+    System.out.println(player.strHoleCards());
+    System.out.println(player.strFaceUp());
     System.out.println(game.printCenter());
 
     System.out.println("Would you like to place a bet now? (Y/N)");
@@ -105,7 +105,7 @@ public class Woo {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   public boolean AIRound() {
-    System.out.println("AI " + playerAI.printFaceUp());
+    System.out.println("AI " + playerAI.strFaceUp());
     int i = (int)(Math.random());
     if(i == 0) { //yes
       betAI = (int)(Math.random() * fundsAI);
@@ -124,7 +124,7 @@ public class Woo {
   public String playerHand() {
     String myHand = "";
     for(int i = 0; i < 2; i++) {
-      myHand += player.getHoleCards(i).toString() + "\t";
+      myHand += player.getHoleCard(i).toString() + "\t";
     } for(int i = 0; i < 3; i++) {
       myHand += player.getFaceUp(i).toString() + "\t";
     } for(int i = 0; i < 3; i++) {
@@ -140,7 +140,7 @@ public class Woo {
   public String AIHand() {
     String AIHand = "";
     for(int i = 0; i < 2; i++) {
-      AIHand += playerAI.getHoleCards(i).toString() + "\t";
+      AIHand += playerAI.getHoleCard(i).toString() + "\t";
     } for(int i = 0; i < 3; i++) {
       AIHand += playerAI.getFaceUp(i).toString() + "\t";
     } for(int i = 0; i < 3; i++) {
