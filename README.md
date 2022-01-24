@@ -16,6 +16,7 @@
 * The last three cards of each hand will be identical since they are the center cards, which is shared between the player and the AI.
 
 ## Instructions
+Run the following in your terminal:
 ```
 git clone git@github.com:njiang20/OrangeBananas.git
 cd ~/OrangeBananas/
