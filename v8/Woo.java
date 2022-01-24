@@ -188,10 +188,10 @@ public class Woo {
     int i = 0;
     while(i < 1) {
         //if(!game.playerHand() || !game.AIHand())
-      if(!game.evaluate())
+      if(!game.playerHand() || !game.AIHand()){
       break;
       i++;
-      System.out.println();
+      System.out.println();}
     } //end while loop
 
   } //end main

@@ -3,18 +3,18 @@ import java.util.*;
 public class Game {
   private ArrayList<Card> center = new ArrayList<Card>();
 
-  private Deck deck;
+  private Deck thisDeck = new Deck();
 
-  public Game() {
-    deck = new Deck();
-    deck.shuffle();
+  public Game(Deck deck) {
+    thisDeck = deck;
+    thisDeck.shuffle();
     addCenterCard();
   }
 
   public void addCenterCard() {
     if(center.size() < 3) {
-      center.add(deck.getDeckCard(0));
-      deck.removeCard(0);
+      center.add(thisDeck.getDeckCard(0));
+      thisDeck.removeCard(0);
     }
   } //end addCenterCard
 
@@ -33,7 +33,7 @@ public class Game {
 
 /*
   public static void main(String[] args) {
-    Game game = new Game(deck);
+    Game game = new Game(thisDeck);
     System.out.println(printGame());
   }
 */
