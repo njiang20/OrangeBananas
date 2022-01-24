@@ -13,29 +13,46 @@ OBSTACLES OVERCOME
 wow we so BOSS bc...
 * figured out issue behind randCard()
 * drafted plan for texas holdem and tackled each class
-* used most of the content from the semester
+* made a project that utilizes most of the content from the semester
+* repurposed bubbleSortV to work on a Deck
+* made overwritten constructors
+* discovered ENUMS for constants
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 blah blah pesky bug...
 maybe some of these will move into the Obs.Ovrcm section...
+* the combos proved to be a bigger undertaking than previously thought
+* does not tell you who wins (the player with the greater combo)
+* does not redistribute funds after a win
+* sometimes code is not elegant or stylish
+* vars and methods could use some renaming and tidying up
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 wow! oo!...
 * Collections.sort(), Collections.shuffle()
+* switch case default
+
+
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
-* we changed
+* we changed suits and val in class Card to final because they are constants
+* we adopted the use of ArrayList for deck to prevent overlap when drawing
+  a card (because you can remove and add items)
+
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
+* HW is useful and can be looked back on when in trouble
+  for ex, stealing the scanner or repurposing bubbleSortV
+* even if your game doesnt work, it was still a learning experience
+* dont fall into the rabbit hole...
 * communication is key
-* pick groupmates wisely
-* work incrementally and dont pull an all nighter before the due date
+* work incrementally
 * make a concrete plan because you never know how long an aspect of your
-  project might take
+  project might take (the combos)
 ||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -103,10 +120,12 @@ Nina :: fixed Card, Game, Deck
 
 2022-01-22
 --------------------------------------------------------------
-Nina :: randomized Deck, fixed center + faceup cards for Game, made v4 + v5,
+Nina :: randomized Deck, fixed center + face up cards for Game, made v4 + v5,
 created AI in woo + compiled
 Russell: adjusted bubbleSort to sort a deck, v6.5
 Russell: made v7, made isSequential, sameSuit methods, changed functionality of
   Evaluate
 Russell: made v8, began numSameVal, began combo methods
+Russell: made a latest working version (which is actually just a copy of v5)
+ and called it a night
 ==============================================================
