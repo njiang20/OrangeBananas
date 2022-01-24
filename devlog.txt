@@ -17,6 +17,7 @@ wow we so BOSS bc...
 * repurposed bubbleSortV to work on a Deck
 * made overwritten constructors
 * discovered ENUMS for constants
+* did flowChart
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
