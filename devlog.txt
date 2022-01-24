@@ -98,5 +98,5 @@ Nina :: fixed Card, Game, Deck
 Nina :: randomized Deck, fixed center + faceup cards for Game, made v4 + v5,
 created AI in woo + compiled
 Russell: adjusted bubbleSort to sort a deck, v6.5
-Russell: made v7, made isSequential, sameSuit methods
+Russell: made v7, made isSequential, sameSuit methods, removed Evaluate
 ==============================================================
