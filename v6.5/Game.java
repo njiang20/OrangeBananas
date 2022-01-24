@@ -2,10 +2,11 @@ import java.util.*;
 
 public class Game {
   private ArrayList<Card> center = new ArrayList<Card>();
-  private Deck deck = new Deck();
 
-  public Game(Deck deck) {
-    this.deck = deck;
+  private Deck deck;
+
+  public Game() {
+    deck = new Deck();
     deck.shuffle();
     addCenterCard();
   }

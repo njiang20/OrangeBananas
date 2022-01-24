@@ -35,11 +35,11 @@ public class Deck {
     }
   }
 
-  /*public static void main(String[] args) {
+  public static void main(String[] args) {
     Deck test = new Deck();
     printDeck();
     System.out.println("=====================================================");
     shuffle();
     printDeck();
-  }*/
+  }
 } //end Deck
