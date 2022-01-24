@@ -5,7 +5,7 @@
 
 ## Project Description
 **What is this code for?**
-** The following code in this repository simulates the playing of Texas Hold-em against an "AI" using a 52-card deck of playing cards.
+* The following code in this repository simulates the playing of Texas Hold-em against an "AI" using a 52-card deck of playing cards.
 * Woo is the driver file that starts each round of the game between the player and an AI. 
 * The player has the option to set or increase their bet each round. 
 * The AI can do the same, although it's bet will be randomized. 
